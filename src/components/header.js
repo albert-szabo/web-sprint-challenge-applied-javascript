@@ -13,7 +13,6 @@
 //
 
 const Header = (title, date, temp) => {
-
   const header = document.createElement('div');
   const dateToAdd = document.createElement('span');
   const titleToAdd = document.createElement('h1');
@@ -32,7 +31,6 @@ const Header = (title, date, temp) => {
   header.appendChild(tempToAdd);
 
   return header;
-
 }
 
 // TASK 2
