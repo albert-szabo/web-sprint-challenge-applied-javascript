@@ -17,7 +17,6 @@ import axios from 'axios';
 //
 
 const Tabs = (topics) => {
-
   const topicsWrapper = document.createElement('div');
   const topic1 = document.createElement('div');
   const topic2 = document.createElement('div');
@@ -45,7 +44,6 @@ const Tabs = (topics) => {
   topicsWrapper.appendChild(topic5);
 
   return topicsWrapper;
-
 }
 
 // TASK 4
@@ -57,7 +55,6 @@ const Tabs = (topics) => {
 //
 
 const tabsAppender = (selector) => {
-
   axios.get('http://localhost:5001/api/topics')
   .then(response => {
     document.querySelector(selector).appendChild(Tabs(response.data.topics));
@@ -65,7 +62,6 @@ const tabsAppender = (selector) => {
   .catch(error => {
     console.error(error);
   })
-
 }
 
 export { Tabs, tabsAppender }
